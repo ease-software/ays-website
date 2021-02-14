@@ -1,4 +1,4 @@
-# website
+# AYS front-end website
 
 ## Project setup
 ```
