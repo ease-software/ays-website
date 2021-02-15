@@ -10,7 +10,10 @@
           <v-col>
             <div class="text-center mt-16 pt-16">
               <h1 class="big-text text-shadow white--text">Customer Service</h1>
-              <p class="headline white--text">Service, Complaint & Sales Calls Are Will Be Answered Within 30 Seconds</p>
+              <p class="headline white--text">
+                Service, Complaint & Sales Calls Are Will Be Answered Within 30
+                Seconds
+              </p>
               <h3 class="big-text">
                 <v-icon color="black" size="56">mdi-phone</v-icon>
                 <span>13648</span>
@@ -18,14 +21,9 @@
             </div>
           </v-col>
         </v-row>
-      </v-container></v-img
-    >
-    <v-container class="contact-infos">
-      <v-row>
-        <v-col></v-col>
-        <v-col> </v-col>
-      </v-row>
-    </v-container>
+      </v-container>
+    </v-img>
+    
   </div>
 </template>
 

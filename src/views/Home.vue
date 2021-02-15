@@ -8,6 +8,7 @@
     <div class="ma-16"></div>
     <featured-products-section />
     <div class="ma-16"></div>
+    <rent-appartment-section />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import CategoriesSection from '../components/home/CategoriesSection.vue'
 import CustomerServicesContactInfos from '../components/home/CustomerServicesContactInfos.vue'
 import FeaturedProductsSection from '../components/home/FeaturedProductsSection.vue'
 import Intor from '../components/home/Intor.vue'
+import RentAppartmentSection from '../components/home/RentAppartmentSection.vue'
 // @ is an alias to /src
 
 export default {
@@ -24,7 +26,8 @@ export default {
     Intor,
     CategoriesSection,
     CustomerServicesContactInfos,
-    FeaturedProductsSection
+    FeaturedProductsSection,
+    RentAppartmentSection
     
   }
 }
