@@ -4,8 +4,8 @@
       :src="require('../../assets/customer_services.png')"
       gradient="to left, #fdbd3c, #fdbd3c02"
       style=""
-      ><v-container>
-        <v-row>
+      ><v-container fill-height>
+        <v-row align="center">
           <v-col></v-col>
           <v-col>
             <div class="text-center mt-16 pt-16">

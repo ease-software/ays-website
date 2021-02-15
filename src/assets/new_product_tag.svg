@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113.818" height="116.418" viewBox="0 0 113.818 116.418">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #df072a;
+      }
+
+      .cls-2 {
+        fill: #83081c;
+      }
+
+      .cls-3 {
+        fill: #7e0418;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-size: 21px;
+        font-family: SegoeUI-Bold, Segoe UI;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        filter: url(#NEW);
+      }
+    </style>
+    <filter id="NEW" x="27.304" y="25.8" width="61.417" height="60.874" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_14975" data-name="Group 14975" transform="translate(-240.613 -2227.061)">
+    <path id="Path_19515" data-name="Path 19515" class="cls-1" d="M6.153-24.227,33.1,4.16l1.8,75.857L9.569,109.854Z" transform="matrix(0.719, -0.695, 0.695, 0.719, 253.017, 2268.73)"/>
+    <path id="Path_19516" data-name="Path 19516" class="cls-2" d="M-13671.789-2737.943l-2.909,2.113v-5.005Z" transform="translate(14008 5079)"/>
+    <path id="Path_19517" data-name="Path 19517" class="cls-3" d="M-13673.2-2739.593h-2.2l-.15-2.281Z" transform="translate(13916.182 4988.912)"/>
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, 240.61, 2227.06)">
+      <text id="NEW-2" data-name="NEW" class="cls-4" transform="matrix(0.72, 0.69, -0.69, 0.72, 33.78, 43.35)"><tspan x="0" y="0">NEW</tspan></text>
+    </g>
+  </g>
+</svg>
