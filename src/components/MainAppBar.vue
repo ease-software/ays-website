@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar absolute color="white" dark scroll-target="#scrolling-techniques-8">
+  <v-app-bar elevate-on-scroll app color="white">
     <v-toolbar-title>
       <v-img contain :src="require('../assets/logo.png')" alt="" height="45"/>
     </v-toolbar-title>

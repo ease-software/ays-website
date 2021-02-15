@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
-    <v-container fill-height>
-      <v-row align="center">
+    <v-container fill-height >
+      <v-row align="center" >
         <v-col>
           <v-img :src="require('../../assets/whiteWhaleLogo.png')" width="350"></v-img>
           <p class="display-1 mt-6 white--text text-shadow">
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .intro {
     height: 118vh;
     background-color: #fdbd3c;

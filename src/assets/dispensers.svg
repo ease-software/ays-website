@@ -1,0 +1,14 @@
+<svg id="Component_2_1" data-name="Component 2 – 1" xmlns="http://www.w3.org/2000/svg" width="41.751" height="67.713" viewBox="0 0 41.751 67.713">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fdbd3c;
+      }
+    </style>
+  </defs>
+  <path id="_4097142" data-name="4097142" d="M125.408,36.673a13.856,13.856,0,0,0,2.214-7.548v-.564h3.823V24.723h-3.823V15.787h3.823V11.95h-3.823V0H99.766V11.95H95.943v3.838h3.823v8.936H95.943v3.838h3.823v.564a13.856,13.856,0,0,0,2.214,7.548H92.818V65.5h41.751V36.673ZM103.6,2.232h20.18V11.95H103.6Zm0,13.555h20.18v8.936H103.6Zm0,13.338v-.564h20.18v.564a10.017,10.017,0,0,1-3.395,7.548H107A10.017,10.017,0,0,1,103.6,29.125Zm12.009,25.238V49.9h7.638V61.661H104.137V49.9h7.638v4.468Zm15.119,7.3h-3.643v-15.6H100.3v15.6H96.656V40.511h34.075V61.661Z" transform="translate(-92.818 2.214)"/>
+  <path id="Path_19481" data-name="Path 19481" d="M2.356,0H25.894c1.3,0,2.039,1.19,2.039,2.52s.049,2.3-1.251,2.3H2.356a2.413,2.413,0,0,1-2.3-2.489A2.271,2.271,0,0,1,2.356,0Z" transform="translate(6.949)"/>
+  <rect id="Rectangle_1793" data-name="Rectangle 1793" width="28.897" height="4.816" rx="2.408" transform="translate(7 38.528)"/>
+  <rect id="Rectangle_1794" data-name="Rectangle 1794" class="cls-1" width="37.566" height="3.853" rx="1.926" transform="translate(2 13.484)"/>
+  <rect id="Rectangle_1795" data-name="Rectangle 1795" class="cls-1" width="37.566" height="3.853" rx="1.926" transform="translate(2 26.007)"/>
+</svg>
