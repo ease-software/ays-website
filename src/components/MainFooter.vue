@@ -62,7 +62,7 @@ export default {
       },
       {
         name: "find us on facebook",
-        link: "https://www.facebook.com/ocean-sms",
+        link: "https://www.facebook.com/facebook",
         icon: "mdi-facebook",
       },
     ],
