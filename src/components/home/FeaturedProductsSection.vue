@@ -13,8 +13,8 @@
       v-for="nth_categories_group in products.length / 4"
       :key="nth_categories_group"
     >
-      <v-col v-for="n in 4" :key="n">
-        <v-card flat outlined class="category-card pa-0">
+      <v-col v-for="n in 4" :key="n" cols="12" md="6" sm="12" lg="3">
+        <v-card flat outlined class="category-card pa-0" elevation="8">
           <div class="new-product-tag">
             <v-img
               :src="require(`../../assets/new_product_tag.svg`)"
@@ -118,6 +118,11 @@ export default {
   border-color: #fdbd3c !important;
   border-top-left-radius: 80px !important;
   border-bottom-right-radius: 80px !important;
+}
+
+.category-card:hover {
+  cursor: pointer;
+  background-color: #fdbd3c25;
 }
 
 .new-product-tag {
