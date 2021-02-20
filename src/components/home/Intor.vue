@@ -1,25 +1,29 @@
 <template>
   <div class="intro">
-    <v-container fill-height>
-      <v-row align="center" justify="center">
-        <v-col cols="12" lg="6" class="pt-12 text-center">
-          <v-img
-            :src="require('../../assets/whiteWhaleLogo.png')"
-            :width="$vuetify.breakpoint.lgAndUp ? 350 : 250"
-            class="mx-auto"
-          ></v-img>
-          <p class="display-1 mt-6 white--text text-shadow">
-            All Your Home Appliances
-          </p>
-          <p class=" mt-4 white--text text-shadow big-text">
-            In One Place
-          </p>
-        </v-col>
-        <v-col cols="12" lg="6" class="pt-12 pb-12">
-          <v-img :src="require('../../assets/Appliances.png')"></v-img>
-        </v-col>
-      </v-row>
-    </v-container>
+    <v-carousel cycle hide-delimiter-background show-arrows-on-hover class="">
+      <v-carousel-item v-for="(slide) in 5" :key="slide">
+      <v-container fill-height>
+        <v-row align="center" justify="center">
+          <v-col cols="12" lg="6" class="pt-12 text-center">
+            <v-img
+              :src="require('../../assets/whiteWhaleLogo.png')"
+              :width="$vuetify.breakpoint.lgAndUp ? 350 : 250"
+              class="mx-auto"
+            ></v-img>
+            <p class="display-1 mt-6 white--text text-shadow">
+              All Your Home Appliances
+            </p>
+            <p class=" mt-4 white--text text-shadow big-text">
+              In One Place
+            </p>
+          </v-col>
+          <v-col cols="12" lg="6" class="pt-12 pb-12">
+            <v-img :src="require('../../assets/Appliances.png')"></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
+      </v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
