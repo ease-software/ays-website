@@ -1,9 +1,13 @@
 <template>
   <div class="intro">
-    <v-container fill-height >
-      <v-row align="center" >
-        <v-col>
-          <v-img :src="require('../../assets/whiteWhaleLogo.png')" width="350"></v-img>
+    <v-container fill-height>
+      <v-row align="center" justify="center">
+        <v-col cols="12" lg="6" class="pt-12 text-center">
+          <v-img
+            :src="require('../../assets/whiteWhaleLogo.png')"
+            :width="$vuetify.breakpoint.lgAndUp ? 350 : 200"
+            class="mx-auto"
+          ></v-img>
           <p class="display-1 mt-6 white--text text-shadow">
             All Your Home Appliances
           </p>
@@ -11,7 +15,7 @@
             In One Place
           </p>
         </v-col>
-        <v-col>
+        <v-col cols="12" lg="6" class="pt-12 pb-12">
           <v-img :src="require('../../assets/Appliances.png')"></v-img>
         </v-col>
       </v-row>
@@ -20,22 +24,20 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
-  .intro {
-    height: 118vh;
-    background-color: #fdbd3c;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 86%);
-  }
-  .text-shadow {
-    text-shadow: 2px 1px 4px #CCCCCC80;
-  }
-  .big-text{
-    font-weight: 900 !important;
-    font-size: 4rem !important;
-  }
+.intro {
+  min-height: 90vh;
+  background-color: #fdbd3c;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 86%);
+}
+.text-shadow {
+  text-shadow: 2px 1px 4px #cccccc80;
+}
+.big-text {
+  font-weight: 900 !important;
+  font-size: 4rem !important;
+}
 </style>
