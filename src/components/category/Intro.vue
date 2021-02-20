@@ -1,6 +1,6 @@
 <template>
   <div class="intro text-center">
-    <h1 class="display-2 font-weight-black py-12">Category Name</h1>
+    <h1 class="display-2 font-weight-black py-12">{{$route.params.id}}</h1>
   </div>
 </template>
 

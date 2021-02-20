@@ -14,7 +14,7 @@
     >
       <v-col v-for="n in 4" :key="n" cols="12" md="6" sm="12" lg="3">
         <v-hover v-slot="{ hover }">
-          <v-card flat outlined class="category-card pa-4" :elevation="hover ? 8 : 0">
+          <v-card flat outlined class="category-card pa-4" :elevation="hover ? 8 : 0" rout :to="`/categories/${categoires[(nth_categories_group - 1) * 4 + (n - 1)].name}`">
             <v-card-title>
               <v-spacer></v-spacer>
               <div style="height: 80px">
