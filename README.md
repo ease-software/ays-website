@@ -19,7 +19,7 @@ yarn serve
 ```
 npm run build
 ```
-or use yarn
+or use yarn ya habeeby
 ```
 yarn build
 ```
