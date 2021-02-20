@@ -30,7 +30,7 @@
             v-for="(contact, index) of contacts_list"
             :key="index"
           >
-            <a :href="contact.link" class="white--text">
+            <a :href="contact.link" class="white--text" target="_balnk">
               <v-icon class="mx-4">{{ contact.icon }}</v-icon>
               {{ contact.name }}</a
             >
