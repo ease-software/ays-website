@@ -2,12 +2,14 @@
   <div>
     <v-app-bar elevate-on-scroll app color="white">
       <v-toolbar-title>
-        <v-img
-          contain
-          :src="require('../assets/logo.png')"
-          alt=""
-          height="45"
-        />
+        <router-link to="/">
+          <v-img
+            contain
+            :src="require('../assets/logo.png')"
+            alt=""
+            height="45"
+          />
+        </router-link>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -54,14 +56,14 @@
           <v-divider class=""></v-divider>
         </v-list-item-group>
         <v-list-item-group
-          active-class="deep-purple--text text--accent-4" color="#fdbd3c"
+          active-class="deep-purple--text text--accent-4"
+          color="#fdbd3c"
         >
           <v-list-item>
             <v-list-item-title>عربي</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
-      
     </v-navigation-drawer>
   </div>
 </template>
@@ -71,7 +73,7 @@ export default {
   data: () => ({
     drawer: false,
     mainPages: [
-      { name: "Home", rout: "#" },
+      { name: "Home", rout: "/" },
       { name: "Products", rout: "#" },
       { name: "Rent Appartment", rout: "#" },
       { name: "About us", rout: "#" },

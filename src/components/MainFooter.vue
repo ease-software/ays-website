@@ -3,12 +3,13 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="12" lg="6">
-          <v-img
-            contain
-            :src="require('../assets/logo_white.png')"
-            alt=""
-            height="45"
-          />
+          <router-link to="/">
+            <v-img
+              contain
+              :src="require('../assets/logo_white.png')"
+              alt=""
+              height="45"
+          /></router-link>
         </v-col>
         <v-col cols="3" md="12" lg="3">
           <div>
@@ -44,7 +45,7 @@
 export default {
   data: () => ({
     links: [
-      { name: "Home", rout: "#" },
+      { name: "Home", rout: "/" },
       { name: "About", rout: "#" },
       { name: "Contact", rout: "#" },
     ],
