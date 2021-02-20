@@ -17,7 +17,7 @@ yarn serve
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run build ya seed alnas
 ```
 or use yarn ya habeeby
 ```
