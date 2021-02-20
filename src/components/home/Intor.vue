@@ -5,7 +5,7 @@
         <v-col cols="12" lg="6" class="pt-12 text-center">
           <v-img
             :src="require('../../assets/whiteWhaleLogo.png')"
-            :width="$vuetify.breakpoint.lgAndUp ? 350 : 200"
+            :width="$vuetify.breakpoint.lgAndUp ? 350 : 250"
             class="mx-auto"
           ></v-img>
           <p class="display-1 mt-6 white--text text-shadow">
