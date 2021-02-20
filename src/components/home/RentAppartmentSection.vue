@@ -2,7 +2,6 @@
   <div class="rent-appartment-section-container">
     <v-carousel
       cycle
-      height="100vh"
       hide-delimiter-background
       show-arrows-on-hover
       class=""
@@ -11,8 +10,8 @@
         <v-img
           :src="require('../../assets/rent_apprtment.png')"
           gradient="to left, #fdbd3c, #fdbd3c02"
-          ><v-container fill-height>
-            <v-row align="center">
+          ><v-container>
+            <v-row >
               <v-col></v-col>
               <v-col>
                 <div class="mt-16 pb-16">
