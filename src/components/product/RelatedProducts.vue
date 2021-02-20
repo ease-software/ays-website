@@ -1,11 +1,18 @@
 <template>
   <div>
+    <v-container class="mb-4">
+      <v-row>
+        <v-col>
+          <p class="font-weight-black display-2">Related Products</p>
+        </v-col>
+      </v-row>
+    </v-container>
     <products-group :products="products" />
   </div>
 </template>
 
 <script>
-import ProductsGroup from '../ProductsGroup.vue';
+import ProductsGroup from "../ProductsGroup.vue";
 export default {
   components: { ProductsGroup },
   data: () => ({
