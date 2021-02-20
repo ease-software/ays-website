@@ -3,7 +3,7 @@
 
 ## Project setup
 ```
-npm install ya maaaaaan
+npm install
 ```
 
 ### Compiles and hot-reloads for development
@@ -15,9 +15,9 @@ or use  yarn
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production ya os6oooora
 ```
-npm run build ya seed alnas
+npm run build
 ```
 or use yarn ya habeeby
 ```
