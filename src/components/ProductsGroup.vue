@@ -76,11 +76,37 @@ export default {
 };
 </script>
 
-<style>
+<style >
 .product-card {
   border-color: #fdbd3c !important;
   border-top-left-radius: 80px !important;
   border-bottom-right-radius: 80px !important;
   overflow: hidden;
+}
+
+
+.category-card:hover {
+  cursor: pointer;
+  cursor: pointer;
+  background-color: #fdbd3c25;
+  background-color: #fdbd3c25;
+}
+.new-product-tag {
+  position: relative;
+  position: relative;
+  top: -23px;
+  top: -23px;
+  right: -22px;
+  right: -22px;
+  z-index: 2;
+  z-index: 2;
+}
+.new-product-tag-image {
+  position: absolute;
+  position: absolute;
+  top: 200;
+  top: 200;
+  right: 0;
+  right: 0;
 }
 </style>
