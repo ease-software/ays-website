@@ -75,7 +75,7 @@ export default {
     mainPages: [
       { name: "Home", rout: "/" },
       { name: "Products", rout: "#" },
-      { name: "Rent Appartment", rout: "#" },
+      { name: "Rent Apartments", rout: "/apartments" },
       { name: "About us", rout: "#" },
     ],
   }),
