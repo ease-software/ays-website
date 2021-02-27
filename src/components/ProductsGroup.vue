@@ -7,7 +7,7 @@
         v-for="nth_categories_group in products.length / 4"
         :key="nth_categories_group"
       >
-        <v-col v-for="n in 4" :key="n" cols="12" md="6" sm="12" lg="3">
+        <v-col v-for="n in 4" :key="n" cols="12" md="6" sm="12" lg="3" :class="{'pa-8': $vuetify.breakpoint.smAndDown}">
           <v-card
             flat
             outlined
@@ -30,7 +30,7 @@
             </div>
             <v-card-title>
               <v-spacer></v-spacer>
-              <div style="height: 220px">
+              <div style="height: 160px">
                 <v-img
                   :src="
                     require(`../assets/${
