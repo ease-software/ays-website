@@ -44,7 +44,7 @@
     >
       <v-list nav dense>
         <v-list-item-group
-          active-class="deep-purple--text text--accent-4"
+          active-class="text--accent-4"
           v-for="(page, index) of mainPages"
           :key="index"
           rout
@@ -56,7 +56,7 @@
           <v-divider class=""></v-divider>
         </v-list-item-group>
         <v-list-item-group
-          active-class="deep-purple--text text--accent-4"
+          active-class="text--accent-4"
           color="#fdbd3c"
         >
           <v-list-item>
