@@ -31,7 +31,8 @@
             </v-card>
           </v-col>
         </v-row>
-        <v-row v-if="$vuetify.breakpoint.smAndDown"><v-col class="my-16 py-16"></v-col></v-row>
+        <v-row v-if="$vuetify.breakpoint.mdAndDown"><v-col class="my-16 py-16"></v-col></v-row>
+        <v-row v-else><v-col class="my-6"></v-col></v-row>
       </v-container>
   </div>
 </template>
@@ -50,7 +51,7 @@ export default {
 
 <style scoped>
 .intro {
-  min-height: 90vh;
+  
   background-color: #fdbd3c;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 }

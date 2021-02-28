@@ -7,7 +7,15 @@
         v-for="nth_categories_group in products.length / 4"
         :key="nth_categories_group"
       >
-        <v-col v-for="n in 4" :key="n" cols="12" md="6" sm="12" lg="3" :class="{'pa-8': $vuetify.breakpoint.smAndDown}">
+        <v-col
+          v-for="n in 4"
+          :key="n"
+          cols="12"
+          md="6"
+          sm="12"
+          lg="3"
+          :class="{ 'pa-8': $vuetify.breakpoint.smAndDown }"
+        >
           <v-card
             flat
             outlined
@@ -76,7 +84,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .product-card {
   border-color: #fdbd3c !important;
   border-top-left-radius: 80px !important;
@@ -84,29 +92,19 @@ export default {
   overflow: hidden;
 }
 
-
-.category-card:hover {
+.product-card:hover {
   cursor: pointer;
-  cursor: pointer;
-  background-color: #fdbd3c25;
   background-color: #fdbd3c25;
 }
 .new-product-tag {
   position: relative;
-  position: relative;
-  top: -23px;
   top: -23px;
   right: -22px;
-  right: -22px;
-  z-index: 2;
   z-index: 2;
 }
 .new-product-tag-image {
   position: absolute;
-  position: absolute;
   top: 200;
-  top: 200;
-  right: 0;
   right: 0;
 }
 </style>
