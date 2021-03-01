@@ -20,6 +20,6 @@ export default {
 <style scoped>
 .intro {
   background-color: #fdbd3c;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
 }
 </style>

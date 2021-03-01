@@ -14,7 +14,7 @@
           lg="4"
           :class="{ 'pa-8': $vuetify.breakpoint.smAndDown }"
         >
-          <v-card flat outlined elevation="8" class="pa-0 offer-card">
+          <v-card flat outlined elevation="8" class="pa-0 mt-4 offer-card">
             <v-card-text class="pa-0 ma-0">
               <v-img
                 :src="
