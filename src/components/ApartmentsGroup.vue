@@ -17,7 +17,7 @@
           <v-card
             flat
             outlined
-            class="pa-0 mt-16 offer-card"
+            class="pa-0 mt-8 offer-card"
             elevation="8"
             route
             :to="
