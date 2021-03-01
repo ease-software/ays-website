@@ -14,7 +14,19 @@
           lg="4"
           :class="{ 'pa-8': $vuetify.breakpoint.smAndDown }"
         >
-          <v-card flat outlined elevation="8" class="pa-0 mt-4 offer-card">
+          <v-card
+            flat
+            outlined
+            class="pa-0 mt-16 offer-card"
+            elevation="8"
+            route
+            :to="
+              `/apartments/category_slug/${
+                rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].title
+              }`
+            "
+            :ripple="{ class: 'orange--text' }"
+          >
             <v-card-text class="pa-0 ma-0">
               <v-img
                 :src="
@@ -56,20 +68,25 @@ export default {
     rentOffers: {
       type: Array,
       required: true,
-      default: ()=>([])
-    }
+      default: () => [],
+    },
   },
 };
 </script>
 
 <style scoped>
 .footer {
-  background-color: #fdbd3c  !important;
-  color: white
+  background-color: #fdbd3c !important;
+  color: white;
 }
 .offer-card {
   border-color: #fdbd3c !important;
   border-top-left-radius: 80px !important;
   overflow: hidden;
+}
+
+.offer-card:hover {
+  cursor: pointer;
+  background-color: #fdbd3c25;
 }
 </style>

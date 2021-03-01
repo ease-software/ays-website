@@ -20,7 +20,6 @@
             cycle
             hide-delimiter-background
             show-arrows-on-hover
-            class=""
           >
             <v-carousel-item v-for="slide in 5" :key="slide">
               <v-img :src="require('../../assets/Appliances.png')"></v-img>

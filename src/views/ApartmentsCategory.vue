@@ -1,8 +1,9 @@
 <template>
   <div>
     <intro />
-    <div class="py-6"></div>
+    <div class="py-10"></div>
     <rent-offers />
+    <div class="py-16"></div>
   </div>
 </template>
 
