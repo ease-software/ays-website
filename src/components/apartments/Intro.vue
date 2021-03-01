@@ -13,7 +13,7 @@
         </v-row>
         <v-row>
           <v-col v-for="(offer, index) of offers" :key="index" cols="12" lg="4" sm="12">
-            <v-card elevation="2">
+            <v-card elevation="2" route :to="`/apartments/${offer.slug}`">
               <v-card-title >
                  <v-container fill-height>
                     <v-row align="center">
@@ -41,9 +41,9 @@
 export default {
   data: ()=>({
     offers: [
-      {bedrooms_count: 3, title: 'Three bed rooms', description: 'hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world'},
-      {bedrooms_count: 2, title: 'Two bed rooms', description: 'hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world'},
-      {bedrooms_count: 1, title: 'One bed room', description: 'hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world'},
+      {bedrooms_count: 3, title: 'Three bed rooms', slug: 'three_bedrooms', description: 'hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world'},
+      {bedrooms_count: 2, title: 'Two bed rooms', slug: 'two_bedrooms', description: 'hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world'},
+      {bedrooms_count: 1, title: 'One bed room', slug: 'one_bedroom', description: 'hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world'},
     ]
   })
 }
