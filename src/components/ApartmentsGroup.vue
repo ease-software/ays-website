@@ -40,7 +40,7 @@
               <v-icon left color="white">mdi-square-outline</v-icon>
               {{ rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].area }}
               <v-spacer></v-spacer>
-              <v-icon left >mdi-map-marker</v-icon>
+              <v-icon left color="white">mdi-map-marker</v-icon>
               {{ rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].area }}
             </v-card-actions>
           </v-card>
