@@ -30,7 +30,7 @@ export default {
   components: { ApartmentsGroup },
   data: () => ({
     loading: true,
-    rentOffers: [],
+    offers: [],
   }),
   async created() {
     await this.loadFeaturedPropertiesOffers();

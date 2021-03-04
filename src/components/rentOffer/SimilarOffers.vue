@@ -5,45 +5,48 @@
         <p class="s-title display-2 font-weight-bold ">
           You May Also Like
         </p>
-        <apartments-group :rentOffers="rentOffers" />
+        <v-container class="">
+          <v-row v-if="loading">
+            <v-col>
+              <v-skeleton-loader
+                class="mx-auto"
+                max-width="300"
+                type="card"
+              ></v-skeleton-loader>
+            </v-col>
+          </v-row>
+          <v-row v-else align="center">
+            <v-col>
+              <apartments-group :rentOffers="offers" />
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import ApartmentsGroup from '../ApartmentsGroup.vue';
+import ApartmentsAPI from "../../api/apartments";
+
+import ApartmentsGroup from "../ApartmentsGroup.vue";
 export default {
   components: { ApartmentsGroup },
   data: () => ({
-    rentOffers: [
-      {
-        asset_image: "apartment.png",
-        title: "One Bedroom",
-        area: "250 SQM",
-        location: "Khartoum, Burry",
-        description:
-          "One bedroom, one bathroom, one hole, one kitchen and one balcony",
-      },
-      {
-        asset_image: "apartment.png",
-        title: "One Bedroom",
-        area: "250 SQM",
-        location: "Khartoum, Burry",
-        description:
-          "One bedroom, one bathroom, one hole, one kitchen and one balcony",
-      },
-      {
-        asset_image: "apartment.png",
-        title: "One Bedroom",
-        area: "250 SQM",
-        location: "Khartoum, Burry",
-        description:
-          "One bedroom, one bathroom, one hole, one kitchen and one balcony",
-      },
-    ],
+    loading: true,
+    offers: [],
   }),
-
+  async created() {
+    await this.loadFeaturedPropertiesOffers();
+  },
+  methods: {
+    async loadFeaturedPropertiesOffers() {
+      this.loading = true;
+      const response = await ApartmentsAPI.loadApartments();
+      this.offers = response;
+      this.loading = false;
+    },
+  },
 };
 </script>
 
