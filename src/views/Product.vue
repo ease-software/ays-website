@@ -14,7 +14,7 @@
             <v-icon>mdi-chevron-right</v-icon>
           </template>
         </v-breadcrumbs>
-        <products-details />
+        <products-details :product="product" />
       </v-container>
       <div class="my-16"></div>
       <rent-appartment-section />
@@ -57,10 +57,10 @@ export default {
   }),
   async created() {
     await this.loadProduct();
-    this.items[1].text = this.product.category.name ;
-    this.items[1].href = `/categories/${this.product.category.id}`
-    this.items[1].disabled = false ;
-    this.items[2].text = this.product.name
+    this.items[1].text = this.product.category.name;
+    this.items[1].href = `/categories/${this.product.category.id}`;
+    this.items[1].disabled = false;
+    this.items[2].text = this.product.name;
   },
   methods: {
     async loadProduct() {

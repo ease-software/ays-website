@@ -5,34 +5,31 @@
         <v-container fluid>
           <v-row>
             <v-col cols="12" sm="3">
-              <div >
+              <div>
                 <v-card
-                  v-for="(image, index) of product.images"
+                  v-for="(image, index) of product.gallery_images"
                   :key="index"
                   outlined
                   shaped
                   class="image-card mb-2"
-                  @click="selectedImageSrc = image.src"
+                  @click="selectedImageSrc = image.source"
                   :class="{
-                    'seclected-image': selectedImageSrc === image.src,
-                    'mx-2' : !$vuetify.breakpoint.smAndUp
+                    'seclected-image': selectedImageSrc === image.source,
+                    'mx-2': !$vuetify.breakpoint.smAndUp,
                   }"
                   :ripple="{ class: 'orange--text' }"
                   :width="$vuetify.breakpoint.smAndUp ? '' : '80'"
                   style="display: inline-block"
                 >
                   <v-card-text>
-                    <v-img :src="require(`../../assets/${image.src}`)"></v-img>
+                    <v-img :src="image.source"></v-img>
                   </v-card-text>
                 </v-card>
               </div>
-              
             </v-col>
             <v-col cols="12" sm="9">
               <v-card outlined>
-                <v-img
-                  :src="require(`../../assets/${selectedImageSrc}`)"
-                ></v-img>
+                <v-img :src="selectedImageSrc"></v-img>
               </v-card>
             </v-col>
           </v-row>
@@ -40,8 +37,8 @@
       </v-col>
 
       <v-col cols="12" lg="5">
-        <p class="display-2 font-weight-black">WD 1229MT</p>
-        <p class="headline ">White Whale Washing Machine</p>
+        <p class="display-2 font-weight-black">{{ product.name }}</p>
+        <p class="headline ">{{ product.short_description }}</p>
         <div class="mt-2">
           <v-tabs v-model="tab" color="#fdbd3c" grow>
             <v-tabs-slider
@@ -61,7 +58,7 @@
                 <tbody>
                   <tr
                     class="text-center"
-                    v-for="(property, index) of product.properties"
+                    v-for="(property, index) of product.details"
                     :key="index"
                   >
                     <td>{{ property.name }}</td>
@@ -90,27 +87,30 @@
 
 <script>
 export default {
-  data: () => ({
-    selectedImageSrc: "washer4.png",
-    tab: null,
+  props: {
     product: {
-      name: "",
-      images: [
-        { src: "washer4.png", alt: "image" },
-        { src: "washer.png", alt: "image" },
-        { src: "washer2.png", alt: "image" },
-      ],
-      properties: [
-        { name: "color", value: "red" },
-        { name: "color", value: "red" },
-        { name: "color", value: "red" },
-        { name: "color", value: "red" },
-        { name: "color", value: "red" },
-        { name: "color", value: "red" },
-      ],
-      features: ["Feature one", "Feature one", "Feature one", "Feature one"],
+      required: true,
+      type: Object,
+      default: () => ({
+        category: {},
+        gallery_images: [],
+      }),
     },
+  },
+  data: () => ({
+    selectedImageSrc: "",
+    tab: null,
   }),
+  created() {
+    this.product.gallery_images.unshift({
+      id: 0,
+      source: this.product.image,
+      product_id: this.product.id,
+      created_at: null,
+      updated_at: null,
+    });
+    this.selectedImageSrc = this.product.image;
+  },
 };
 </script>
 
