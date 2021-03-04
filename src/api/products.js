@@ -5,6 +5,11 @@ const productsAPI = {
     const response = await axios.get("products");
     return response.data;
   },
+
+  async loadProduct(id) {
+    const response = await axios.get(`products/${id}`);
+    return response.data;
+  },
 };
 
 export default productsAPI;
