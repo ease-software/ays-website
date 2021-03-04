@@ -7,7 +7,7 @@
         </h1>
       </v-col>
     </v-row>
-     <v-row v-if="loading">
+    <v-row v-if="loading">
       <v-col>
         <v-skeleton-loader
           class="mx-auto"
@@ -18,34 +18,33 @@
     </v-row>
     <v-row v-else align="center">
       <v-col>
-
-      <products-group :products="products" />
+        <products-group :products="products" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import productsAPI from '../../api/products';
+import productsAPI from "../../api/products";
 
-import ProductsGroup from '../ProductsGroup.vue';
+import ProductsGroup from "../ProductsGroup.vue";
 export default {
   components: { ProductsGroup },
   data: () => ({
     loading: true,
     products: [],
   }),
-  async created(){
+  async created() {
     await this.loadFeaturedProducts();
   },
   methods: {
-    async loadFeaturedProducts(){
+    async loadFeaturedProducts() {
       this.loading = true;
       const response = await productsAPI.loadProducts();
       this.products = response;
       this.loading = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
