@@ -10,11 +10,11 @@
             class=""
           >
             <v-carousel-item
-              v-for="(image, index) of offer.images"
+              v-for="(image, index) of offer.gallery_images"
               :key="index"
               :height="200"
             >
-              <v-img contain :src="require(`../../assets/${image}`)"></v-img>
+              <v-img contain :src="image.source"></v-img>
             </v-carousel-item>
           </v-carousel>
         </v-col>
@@ -37,7 +37,7 @@
       <v-row>
         <v-col class="pt-4">
           <p class="display-1 font-weight-black">Description</p>
-          <p>{{offer.description}}</p>
+          <p>{{ offer.description }}</p>
         </v-col>
       </v-row>
     </v-container>
@@ -46,31 +46,26 @@
 
 <script>
 export default {
-  data: () => ({
+  props: {
     offer: {
-      images: [
-        "apartment.png",
-        "Appliances.png",
-        "apartment.png",
-        "apartment.png",
-        "Appliances.png",
-      ],
-      description: `
-        text as description text as description text as description text as description text as description
-        text as description text as description text as description text as description text as description
-        text as description text as description text as description text as description text as description
-        text as description text as description text as description text as description text as description
-        text as description text as description text as description text as description text as description
-      `,
-      properties: [
-        { name: "property", value: "value" },
-        { name: "property", value: "value" },
-        { name: "property", value: "value" },
-        { name: "property", value: "value" },
-        { name: "property", value: "value" },
-      ],
+      required: true,
+      type: Object,
+      default: () => ({
+        properties: [],
+        gallery_images: [],
+      }),
     },
-  }),
+  },
+  data: () => ({}),
+  created() {
+    this.offer.gallery_images.unshift({
+      id: 0,
+      source: this.offer.image,
+      apartment_id: this.offer.id,
+      created_at: null,
+      updated_at: null,
+    });
+  },
 };
 </script>
 
