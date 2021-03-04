@@ -1,53 +1,49 @@
 <template>
   <div>
-     <v-container class="my-16">
-        <v-row>
-          <v-col class="text-center">
-            <h1 class="display-2 font-weight-black">Featured Properties</h1>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col><apartments-group :rentOffers="rentOffers" /></v-col>
-        </v-row>
-      </v-container>
+    <v-container class="my-16">
+      <v-row>
+        <v-col class="text-center">
+          <h1 class="display-2 font-weight-black">Featured Properties</h1>
+        </v-col>
+      </v-row>
+      <v-row v-if="loading">
+        <v-col>
+          <v-skeleton-loader
+            class="mx-auto"
+            max-width="300"
+            type="card"
+          ></v-skeleton-loader>
+        </v-col>
+      </v-row>
+      <v-row v-else align="center">
+        <v-col><apartments-group :rentOffers="offers"/></v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
-import ApartmentsGroup from '../ApartmentsGroup.vue'
+import ApartmentsAPI from "../../api/apartments";
+
+import ApartmentsGroup from "../ApartmentsGroup.vue";
 export default {
   components: { ApartmentsGroup },
   data: () => ({
-    rentOffers: [
-      {
-        asset_image: "apartment.png",
-        title: "One Bedroom",
-        area: "250 SQM",
-        location: "Khartoum, Burry",
-        description:
-          "One bedroom, one bathroom, one hole, one kitchen and one balcony",
-      },
-      {
-        asset_image: "apartment.png",
-        title: "One Bedroom",
-        area: "250 SQM",
-        location: "Khartoum, Burry",
-        description:
-          "One bedroom, one bathroom, one hole, one kitchen and one balcony",
-      },
-      {
-        asset_image: "apartment.png",
-        title: "One Bedroom",
-        area: "250 SQM",
-        location: "Khartoum, Burry",
-        description:
-          "One bedroom, one bathroom, one hole, one kitchen and one balcony",
-      },
-    ],
+    loading: true,
+    rentOffers: [],
   }),
-}
+  async created() {
+    await this.loadFeaturedPropertiesOffers();
+  },
+  methods: {
+    async loadFeaturedPropertiesOffers() {
+      this.loading = true;
+      const response = await ApartmentsAPI.loadApartments();
+      this.offers = response;
+      this.loading = false;
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

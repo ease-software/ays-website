@@ -2,12 +2,11 @@
   <div>
     <v-container class="">
       <v-row
-        v-for="(nth_apartments_group, index) in rentOffers.length / 3"
-        :key="index"
+       
       >
         <v-col
-          v-for="n in 3"
-          :key="n"
+          v-for="(offer, index) of rentOffers"
+          :key="index"
           cols="12"
           md="6"
           sm="12"
@@ -21,39 +20,33 @@
             elevation="8"
             route
             :to="
-              `/apartments/category_slug/${
-                rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].title
+              `/apartments/${offer.category}/${
+                offer.id
               }`
             "
             :ripple="{ class: 'orange--text' }"
           >
             <v-card-text class="pa-0 ma-0">
               <v-img
-                :src="
-                  require(`../assets/${
-                    rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)]
-                      .asset_image
-                  }`)
-                "
+                :src="offer.image"
               ></v-img>
             </v-card-text>
             <v-card-text class="text-center">
               <h1 class="headline black--text font-weight-bold">
-                {{ rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].title }}
+                {{ offer.title }}
               </h1>
               <p class="pt-2 black--text">
                 {{
-                  rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)]
-                    .description
+                  offer.short_description
                 }}
               </p>
             </v-card-text>
             <v-card-actions class="pa-4 footer ma-0">
               <v-icon left color="white">mdi-square-outline</v-icon>
-              {{ rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].area }}
+              {{ offer.area }}
               <v-spacer></v-spacer>
               <v-icon left color="white">mdi-map-marker</v-icon>
-              {{ rentOffers[(nth_apartments_group - 1) * 3 + (n - 1)].area }}
+              {{ offer.location }}
             </v-card-actions>
           </v-card>
         </v-col>
