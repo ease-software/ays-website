@@ -17,7 +17,7 @@
             class="product-card pa-0"
             elevation="8"
             route
-            :to="`/categories/somecategory/${product.id}`"
+            :to="`/products/${product.id}`"
             :ripple="{ class: 'orange--text' }"
           >
             <div class="new-product-tag">
