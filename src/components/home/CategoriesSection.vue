@@ -7,32 +7,44 @@
         </h1>
       </v-col>
     </v-row>
-    <v-row
-      align="center"
-      v-for="nth_categories_group in categoires.length / 4"
-      :key="nth_categories_group"
-    >
-      <v-col v-for="n in 4" :key="n" cols="12" md="6" sm="12" lg="3">
+    <v-row v-if="loading">
+      <v-col>
+        <v-skeleton-loader
+          class="mx-auto"
+          max-width="300"
+          type="card"
+        ></v-skeleton-loader>
+      </v-col>
+    </v-row>
+    <v-row v-else align="center">
+      <v-col
+        v-for="(category, index) of categories"
+        :key="index"
+        cols="12"
+        md="6"
+        sm="12"
+        lg="3"
+      >
         <v-hover v-slot="{ hover }">
-          <v-card flat outlined class="category-card pa-4" :elevation="hover ? 8 : 0" rout :to="`/categories/${categoires[(nth_categories_group - 1) * 4 + (n - 1)].name}`">
+          <v-card
+            flat
+            outlined
+            class="category-card pa-4"
+            :elevation="hover ? 8 : 0"
+            rout
+            :to="`/categories/${category.id}`"
+          >
             <v-card-title>
               <v-spacer></v-spacer>
               <div style="height: 80px">
-                <v-img
-                  :src="
-                    require(`../../assets/${
-                      categoires[(nth_categories_group - 1) * 4 + (n - 1)]
-                        .asset_image
-                    }`)
-                  "
-                ></v-img>
+                <v-img :src="category.icon"></v-img>
               </div>
               <v-spacer></v-spacer>
             </v-card-title>
             <v-card-title>
               <v-spacer></v-spacer>
               <h3>
-                {{ categoires[(nth_categories_group - 1) * 4 + (n - 1)].name }}
+                {{ category.name }}
               </h3>
               <v-spacer></v-spacer>
             </v-card-title>
@@ -44,19 +56,24 @@
 </template>
 
 <script>
+import categoriesAPI from "../../api/categories";
+
 export default {
   data: () => ({
-    categoires: [
-      { name: "DEFRIGERATORS", asset_image: "DEFRIGERATORS.svg" },
-      { name: "DISPENSERS", asset_image: "dispensers.svg" },
-      { name: "WASHING", asset_image: "WASHING.svg" },
-      { name: "DISH WASHER", asset_image: "DISH_WASHER.svg" },
-      { name: "OVENS", asset_image: "OVENS.svg" },
-      { name: "HEATERS", asset_image: "HEATERS.svg" },
-      { name: "WASHING", asset_image: "WASHING2.svg" },
-      { name: "AIR COND", asset_image: "AIR_COND.svg" },
-    ],
+    loading: true,
+    categories: [],
   }),
+  async created() {
+    await this.loadCategories();
+  },
+  methods: {
+    async loadCategories() {
+      this.loading = true;
+      const response = await categoriesAPI.loadCategories();
+      this.categories = response;
+      this.loading = false;
+    },
+  },
 };
 </script>
 
