@@ -1,15 +1,10 @@
 <template>
   <div>
-    <v-container>
-      <v-row
-        align="center"
-        class="mb-8"
-        v-for="nth_categories_group in products.length / 4"
-        :key="nth_categories_group"
-      >
+    <v-container >
+      <v-row align="center" class="mb-8">
         <v-col
-          v-for="n in 4"
-          :key="n"
+          v-for="(product, index) of products"
+          :key="index"
           cols="12"
           md="6"
           sm="12"
@@ -22,30 +17,21 @@
             class="product-card pa-0"
             elevation="8"
             route
-            :to="
-              `/categories/somecategory/${
-                products[(nth_categories_group - 1) * 4 + (n - 1)].name
-              }`
-            "
+            :to="`/categories/somecategory/${product.id}`"
             :ripple="{ class: 'orange--text' }"
           >
             <div class="new-product-tag">
               <v-img
                 :src="require(`../assets/new_product_tag.svg`)"
                 class="new-product-tag-image"
-                v-if="products[(nth_categories_group - 1) * 4 + (n - 1)].isNew"
+                v-if="product.isNew || true"
               ></v-img>
             </div>
             <v-card-title>
               <v-spacer></v-spacer>
               <div style="height: 160px">
                 <v-img
-                  :src="
-                    require(`../assets/${
-                      products[(nth_categories_group - 1) * 4 + (n - 1)]
-                        .asset_image
-                    }`)
-                  "
+                  :src="product.image"
                 ></v-img>
               </div>
               <v-spacer></v-spacer>
@@ -53,15 +39,14 @@
             <v-card-title>
               <v-spacer></v-spacer>
               <h4>
-                {{ products[(nth_categories_group - 1) * 4 + (n - 1)].name }}
+                {{ product.name }}
               </h4>
               <v-spacer></v-spacer>
             </v-card-title>
             <v-card-text>
               <p class="text-center" style="height: 80px">
                 {{
-                  products[(nth_categories_group - 1) * 4 + (n - 1)]
-                    .short_description
+                  product.short_description
                 }}
               </p>
             </v-card-text>
