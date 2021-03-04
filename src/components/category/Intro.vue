@@ -1,12 +1,18 @@
 <template>
   <div class="intro text-center">
-    <h1 class="display-2 font-weight-black py-12">{{$route.params.id}}</h1>
+    <h1 class="display-2 font-weight-black py-12">{{category.name}}</h1>
   </div>
 </template>
 
 <script>
 export default {
-
+  props: {
+    category: {
+      required: true,
+      type: Object,
+      default: ()=>({})
+    }
+  }
 }
 </script>
 
