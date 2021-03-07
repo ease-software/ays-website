@@ -24,7 +24,7 @@ or use yarn ya habeeby
 yarn build
 ```
 
-### Run your unit tests
+### Run your unit tests I recommend TestLink
 ```
 npm run test:unit
 ```
