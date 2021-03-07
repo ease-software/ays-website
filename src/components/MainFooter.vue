@@ -2,7 +2,7 @@
   <v-footer dark class="py-16">
     <v-container>
       <v-row>
-        <v-col cols="12" md="12" lg="6">
+        <v-col cols="12" md="12" lg="5">
           <router-link to="/">
             <v-img
               contain
@@ -21,7 +21,7 @@
             </v-btn>
           </div>
         </v-col>
-        <v-col cols="12" md="12" lg="3">
+        <v-col cols="12" md="12" lg="4">
           <div>
             <strong class="display-1">Contact Us</strong>
           </div>
@@ -50,15 +50,16 @@ export default {
       { name: "Contact", rout: "#" },
     ],
     contacts_list: [
-      { name: "+249910010077", link: "tel:+249910010077", icon: "mdi-phone" },
+      { name: "+249910010077", link: "tel:+249900878400", icon: "mdi-phone" },
       {
         name: "youremail@gmail.com",
-        link: "mailto:youremail@gmail.com",
+        link: "mailto:info@ays-gt.com",
         icon: "mdi-email",
       },
       {
-        name: "Rangpur City",
-        link: "https://goo.gl/maps/cvumpjVuT6Uc67T38",
+        // name: "الخرطوم شارع السجانة بالنص",
+        name: "Al Diyum West, Khartoum, Sudan",
+        link: "https://goo.gl/maps/32V8RipvcmgZTMaf6",
         icon: "mdi-map",
       },
       {
