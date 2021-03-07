@@ -16,7 +16,7 @@
               </p>
               <h3 class="big-text">
                 <v-icon color="black" size="56">mdi-phone</v-icon>
-                <span>13648</span>
+                <span>6485</span>
               </h3>
             </div>
           </v-col>
