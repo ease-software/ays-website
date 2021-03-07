@@ -47,6 +47,29 @@
         "title": "About Us"
       },
       "html": "text about us"
+    },
+    "apartments": {
+      "intro": {
+        "title": "Rent Apartments",
+        "text": "Find properties that you can reserve on the spot",
+        "offers_categories": [
+          {
+            "bedrooms_count": 3, "title": "Three bedrooms", "slug": "three_bedrooms", 
+            "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
+          },
+          {
+            "bedrooms_count": 2, "title": "Two bedrooms", "slug": "two_bedrooms", 
+            "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
+          },
+          {
+            "bedrooms_count": 1, "title": "One bedroom", "slug": "one_bedroom", 
+            "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
+          }
+        ]
+      },
+      "featured": {
+        "title": "Featured Properties"
+      }
     }
   }
 }

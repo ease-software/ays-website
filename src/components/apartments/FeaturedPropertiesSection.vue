@@ -3,7 +3,7 @@
     <v-container class="my-16">
       <v-row>
         <v-col class="text-center">
-          <h1 class="display-2 font-weight-black">Featured Properties</h1>
+          <h1 class="display-2 font-weight-black">{{$t("pages.apartments.featured.title")}}</h1>
         </v-col>
       </v-row>
       <v-row v-if="loading">
