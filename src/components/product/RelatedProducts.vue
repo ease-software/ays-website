@@ -29,6 +29,12 @@ import productsAPI from "../../api/products";
 
 import ProductsGroup from "../ProductsGroup.vue";
 export default {
+  props: {
+    product_id: {
+      required: true,
+      default: 0
+    }
+  },
   components: { ProductsGroup },
   data: () => ({
     loading: true,
@@ -40,7 +46,7 @@ export default {
   methods: {
     async loadRelatedProducts() {
       this.loading = true;
-      const response = await productsAPI.loadProducts();
+      const response = await productsAPI.loadSimilarProducts(this.product_id);
       this.products = response;
       this.loading = false;
     },

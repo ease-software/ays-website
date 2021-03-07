@@ -15,7 +15,7 @@
       <div class="my-16"></div>
       <rent-appartment-section />
       <div class="my-16"></div>
-      <related-products />
+      <related-products :product_id="product.id" />
     </div>
   </div>
 </template>
