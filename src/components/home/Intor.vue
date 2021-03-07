@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import homeCarouselAPI from '../../api/homeCarousel';
 export default {
   data: () => ({
     loading: true,
@@ -49,8 +49,8 @@ export default {
   methods: {
     async loadImages(){
       this.loading = true;
-      const response = await axios.get('home-carousel');
-      this.images = response.data;
+      const response = await homeCarouselAPI.loadImages();
+      this.images = response;
       this.loading = false;
     }
   }
