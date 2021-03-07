@@ -38,7 +38,7 @@ export default {
   methods: {
     async loadFeaturedPropertiesOffers() {
       this.loading = true;
-      const response = await ApartmentsAPI.loadApartments();
+      const response = await ApartmentsAPI.loadFeaturedApartments();
       this.offers = response;
       this.loading = false;
     },
