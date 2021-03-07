@@ -55,10 +55,7 @@
           </v-list-item>
           <v-divider class=""></v-divider>
         </v-list-item-group>
-        <v-list-item-group
-          active-class="text--accent-4"
-          color="#fdbd3c"
-        >
+        <v-list-item-group active-class="text--accent-4" color="#fdbd3c">
           <v-list-item>
             <v-list-item-title>عربي</v-list-item-title>
           </v-list-item>
@@ -73,14 +70,17 @@ export default {
   data: () => ({
     drawer: false,
     mainPages: [
-      { name: "Home", rout: "/" },
-      { name: "Products", rout: "/products" },
-      { name: "Rent Apartments", rout: "/apartments" },
-      { name: "About us", rout: "/about" },
+     
     ],
   }),
   created() {
     this.drawer = this.$vuetify.breakpoint.lgAndUp;
+    this.mainPages = [
+      { name: this.$t('appbar.home'), rout: "/" },
+      { name: this.$t('appbar.products'), rout: "/products" },
+      { name: this.$t('appbar.apartments'), rout: "/apartments" },
+      { name: this.$t('appbar.about'), rout: "/about" },
+    ];
   },
 };
 </script>

@@ -1,3 +1,10 @@
 {
-  "message": "hello i18n !!"
+  "i18n_message": "hello i18n !!",
+  "direction": "ltr",
+  "appbar": {
+    "home" : "Home",
+    "products": "Products",
+    "apartments": "Rent Apartments",
+    "about": "About us"
+  }
 }
