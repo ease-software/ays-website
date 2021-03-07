@@ -10,17 +10,32 @@
     <div v-else>
       <intro />
       <div class="my-6"></div>
+      <products-group :products="products" />
     </div>
   </div>
 </template>
 
 <script>
+import productsAPI from '../api/products';
 import intro from "../components/products/intro.vue";
+import ProductsGroup from '../components/ProductsGroup.vue';
 export default {
-  components: { intro },
+  components: { intro, ProductsGroup },
   data: ()=>({
     loading: false,
-  })
+    products: [],
+  }),
+  async created() {
+    await this.loadProducts();
+  },
+  methods: {
+    async loadProducts() {
+      this.loading = true;
+      const response = await productsAPI.loadProducts();
+      this.products = response;
+      this.loading = false;
+    },
+  },
 };
 </script>
 
