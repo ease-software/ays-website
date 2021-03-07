@@ -36,6 +36,17 @@
       "featured_products": {
         "title": "Featured Products"
       }
+    },
+    "products": {
+      "intro":{
+        "title": "Products"
+      }
+    },
+    "about": {
+      "intro":{
+        "title": "About Us"
+      },
+      "html": "text about us"
     }
   }
 }

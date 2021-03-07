@@ -50,13 +50,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .text-shadow {
   text-shadow: 2px 1px 4px #777777;
 }
 .big-text {
   font-weight: 900 !important;
-  font-size: 2.5rem !important;
+  font-size: 2.rem !important;
 }
 
 .category-card {

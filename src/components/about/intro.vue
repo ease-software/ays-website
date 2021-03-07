@@ -3,7 +3,7 @@
      <v-container class="py-8">
         <v-row class="text-center">
           <v-col>
-            <h1 class="display-2 font-weight-bold">{{$t("pages.products.intro.title")}}</h1>
+            <h1 class="display-2 font-weight-bold">{{$t("pages.about.intro.title")}}</h1>
           </v-col>
         </v-row>
         <v-row><v-col class="my-4"></v-col></v-row>
