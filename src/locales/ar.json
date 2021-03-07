@@ -51,7 +51,7 @@
     "apartments": {
       "intro": {
         "title": "إيجار الشقق",
-        "text": "ابحث عن الخصائص التي تريدها حيث تستطيع الحجز في المنطقة التي تناسبك that you can reserve on the spot",
+        "text": "ابحث عن الخصائص التي تريدها حيث تستطيع الحجز في المنطقة التي تناسبك ",
         "offers_categories": [
           {
             "bedrooms_count": 3, "title": "ثلاث غرف نوم", "slug": "three_bedrooms", 
