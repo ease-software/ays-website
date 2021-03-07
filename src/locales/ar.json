@@ -1,0 +1,89 @@
+{
+  "i18n_message": "مرحبا i18n !!",
+  "direction": "rtl",
+  "appbar": {
+    "home" : "الرئيسية",
+    "products": "المنتجات",
+    "apartments": "إيجار الشقق",
+    "about": "عن الشركة"
+  },
+  "footer": {
+    "links": {
+      "home": "الرئسية",
+      "about": "عن الشركة"
+    },
+    "contact_list": {
+      "mobile": "+249910010077",
+      "email": "info@ays-gt.com",
+      "location": "الخرطوم شارع السجانة بالنص",
+      "facebook": "find us on facebook"
+    }
+  },
+  "pages": {
+    "home": {
+      "intro": {
+        "title": "كل الاجهزة المنزلية",
+        "title_ext": "في مكان واحد"
+      },
+      "categories": {
+        "title": "التصنيفات"
+      },
+      "customer_services": {
+        "title": "خدمة العملاء",
+        "text": "الخدمات والشكاوي والمبيعات -  اتصل بنا وسنرد عليك في 30 ثانية",
+        "hotline": "6485"
+      },
+      "featured_products": {
+        "title": "خصائص مميزة"
+      }
+    },
+    "products": {
+      "intro":{
+        "title": "المنتجات"
+      }
+    },
+    "about": {
+      "intro":{
+        "title": "عن الشركة"
+      },
+      "html": "نص الشركة"
+    },
+    "apartments": {
+      "intro": {
+        "title": "إيجار الشقق",
+        "text": "ابحث عن الخصائص التي تريدها حيث تستطيع الحجز في المنطقة التي تناسبك that you can reserve on the spot",
+        "offers_categories": [
+          {
+            "bedrooms_count": 3, "title": "ثلاث غرف نوم", "slug": "three_bedrooms", 
+            "description": "نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,"
+          },
+          {
+            "bedrooms_count": 2, "title": "غرفتي نوم", "slug": "two_bedrooms", 
+            "description": "نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,"
+          },
+          {
+            "bedrooms_count": 1, "title": "غرفة نوم واحدة", "slug": "one_bedroom", 
+            "description": "نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,"
+          }
+        ]
+      },
+      "featured": {
+        "title": "خصائص مميزة"
+      }
+    },
+    "product": {
+      "details": "المواصفات",
+      "features": "المميزات",
+      "related_products": {
+        "title": "منتجات مشابهة"
+      }
+    },
+    "apartment": {
+      "details": "تفاصيل الشقة",
+      "description": "الوصف",
+      "similar_offers": {
+        "title": "قد يعجبك ايضا"
+      }
+    }
+  }
+}

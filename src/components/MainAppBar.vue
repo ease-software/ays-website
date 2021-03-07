@@ -24,8 +24,9 @@
         >
           <strong>{{ page.name }}</strong>
         </v-btn>
-        <v-btn color="#fdbd3c" plain>
-          <h4>عربي</h4>
+        <v-btn color="#fdbd3c" plain @click="switchLang">
+          <h4 v-if="$i18n.locale == 'en'">عربي</h4>
+          <h4 v-if="$i18n.locale == 'ar'">English</h4>
         </v-btn>
       </div>
 
@@ -69,18 +70,38 @@
 export default {
   data: () => ({
     drawer: false,
-    mainPages: [
-     
-    ],
+    mainPages: [],
   }),
   created() {
     this.drawer = this.$vuetify.breakpoint.lgAndUp;
     this.mainPages = [
-      { name: this.$t('appbar.home'), rout: "/" },
-      { name: this.$t('appbar.products'), rout: "/products" },
-      { name: this.$t('appbar.apartments'), rout: "/apartments" },
-      { name: this.$t('appbar.about'), rout: "/about" },
+      { name: this.$t("appbar.home"), rout: "/" },
+      { name: this.$t("appbar.products"), rout: "/products" },
+      { name: this.$t("appbar.apartments"), rout: "/apartments" },
+      { name: this.$t("appbar.about"), rout: "/about" },
     ];
+  },
+  methods: {
+    switchLang() {
+      let lang = this.$i18n.locale;
+      let newLang = "";
+      if (lang == "en") {
+        newLang = "ar";
+        this.$vuetify.rtl = true;
+      } else {
+        newLang = "en";
+        this.$vuetify.rtl = false;
+      }
+
+      this.$i18n.locale = newLang;
+
+      window.localStorage.setItem("lang", newLang);
+
+      this.$forceUpdate();
+      
+
+      this.$emit("rerender", "lang switch");
+    },
   },
 };
 </script>

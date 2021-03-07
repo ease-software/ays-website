@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container fluid class="pa-0 ma-0">
-      <main-app-bar></main-app-bar>
+      <main-app-bar @rerender="rerender"></main-app-bar>
       <v-main>
         <router-view></router-view>
       </v-main>
@@ -22,5 +22,22 @@ export default {
   data: () => ({
     //
   }),
+  created() {
+    let lang = window.localStorage.getItem("lang");
+    if (lang) {
+      if (lang == "ar") {
+        this.$i18n.locale = "ar";
+        this.$vuetify.rtl = true;
+      } else {
+        this.$i18n.locale = "en";
+        this.$vuetify.rtl = false;
+      }
+    }
+  },
+  methods: {
+    rerender() {
+      window.location.reload();
+    },
+  },
 };
 </script>

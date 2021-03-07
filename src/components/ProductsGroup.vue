@@ -39,14 +39,14 @@
             <v-card-title>
               <v-spacer></v-spacer>
               <h4>
-                {{ product.name }}
+                {{ $i18n.locale == 'ar' ? product.ar_name : product.name }}
               </h4>
               <v-spacer></v-spacer>
             </v-card-title>
             <v-card-text>
               <p class="text-center" style="height: 80px">
                 {{
-                  product.short_description
+                  $i18n.locale == 'ar' ? product.ar_short_description : product.short_description
                 }}
               </p>
             </v-card-text>

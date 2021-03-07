@@ -19,7 +19,7 @@
           </v-carousel>
         </v-col>
         <v-col cols="12" lg="4">
-          <p class="display-1 font-weight-black">Property Details</p>
+          <p class="display-1 font-weight-black">{{$t("pages.apartment.details")}}</p>
           <v-simple-table class="pt-4">
             <tbody>
               <tr
@@ -27,8 +27,8 @@
                 v-for="(property, index) of offer.properties"
                 :key="index"
               >
-                <td>{{ property.name }}</td>
-                <td>{{ property.value }}</td>
+                <td>{{ $i18n.locale == 'ar' ? property.ar_name : property.name }}</td>
+                <td>{{  $i18n.locale == 'ar' ? property.ar_value : property.value }}</td>
               </tr>
             </tbody>
           </v-simple-table>
@@ -36,8 +36,8 @@
       </v-row>
       <v-row>
         <v-col class="pt-4">
-          <p class="display-1 font-weight-black">Description</p>
-          <p>{{ offer.description }}</p>
+          <p class="display-1 font-weight-black">{{$t("pages.apartment.description")}}</p>
+          <p>{{ $i18n.locale == 'ar' ? offer.ar_description : offer.description }}</p>
         </v-col>
       </v-row>
     </v-container>

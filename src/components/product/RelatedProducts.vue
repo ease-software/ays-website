@@ -3,7 +3,7 @@
     <v-container class="mb-4">
       <v-row>
         <v-col>
-          <p class="font-weight-black display-2">Related Products</p>
+          <p class="font-weight-black display-2">{{$t("pages.product.related_products.title")}}</p>
         </v-col>
       </v-row>
       <v-row v-if="loading">

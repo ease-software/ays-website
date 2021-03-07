@@ -3,7 +3,7 @@
     <v-row>
       <v-col class="text-center s-container pa-8">
         <p class="s-title display-2 font-weight-bold ">
-          You May Also Like
+          {{$t("pages.apartment.similar_offers.title")}}
         </p>
         <v-container class="">
           <v-row v-if="loading">

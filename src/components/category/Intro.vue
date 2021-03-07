@@ -1,6 +1,6 @@
 <template>
   <div class="intro text-center">
-    <h1 class="display-2 font-weight-black py-12">{{category.name}}</h1>
+    <h1 class="display-2 font-weight-black py-12">{{$i18n.locale == 'ar' ? category.ar_name:category.name}}</h1>
   </div>
 </template>
 

@@ -44,7 +44,7 @@
             <v-card-title>
               <v-spacer></v-spacer>
               <h3>
-                {{ category.name }}
+                {{ $i18n.locale == 'ar' ? category.ar_name : category.name }}
               </h3>
               <v-spacer></v-spacer>
             </v-card-title>

@@ -33,20 +33,20 @@
             </v-card-text>
             <v-card-text class="text-center">
               <h1 class="headline black--text font-weight-bold">
-                {{ offer.title }}
+                {{ $i18n.locale == 'ar' ? offer.ar_title : offer.title }}
               </h1>
               <p class="pt-2 black--text">
                 {{
-                  offer.short_description
+                  $i18n.locale == 'ar' ? offer.ar_short_description : offer.short_description
                 }}
               </p>
             </v-card-text>
             <v-card-actions class="pa-4 footer ma-0">
               <v-icon left color="white">mdi-square-outline</v-icon>
-              {{ offer.area }}
+              {{ $i18n.locale == 'ar' ? offer.ar_area : offer.area }}
               <v-spacer></v-spacer>
               <v-icon left color="white">mdi-map-marker</v-icon>
-              {{ offer.location }}
+              {{ $i18n.locale == 'ar' ? offer.ar_location : offer.location }}
             </v-card-actions>
           </v-card>
         </v-col>

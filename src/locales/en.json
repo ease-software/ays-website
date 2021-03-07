@@ -2,7 +2,7 @@
   "i18n_message": "hello i18n !!",
   "direction": "ltr",
   "appbar": {
-    "home" : "Home",
+    "home": "Home",
     "products": "Products",
     "apartments": "Rent Apartments",
     "about": "About us"
@@ -38,12 +38,12 @@
       }
     },
     "products": {
-      "intro":{
+      "intro": {
         "title": "Products"
       }
     },
     "about": {
-      "intro":{
+      "intro": {
         "title": "About Us"
       },
       "html": "text about us"
@@ -54,21 +54,41 @@
         "text": "Find properties that you can reserve on the spot",
         "offers_categories": [
           {
-            "bedrooms_count": 3, "title": "Three bedrooms", "slug": "three_bedrooms", 
+            "bedrooms_count": 3,
+            "title": "Three bedrooms",
+            "slug": "three_bedrooms",
             "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
           },
           {
-            "bedrooms_count": 2, "title": "Two bedrooms", "slug": "two_bedrooms", 
+            "bedrooms_count": 2,
+            "title": "Two bedrooms",
+            "slug": "two_bedrooms",
             "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
           },
           {
-            "bedrooms_count": 1, "title": "One bedroom", "slug": "one_bedroom", 
+            "bedrooms_count": 1,
+            "title": "One bedroom",
+            "slug": "one_bedroom",
             "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
           }
         ]
       },
       "featured": {
         "title": "Featured Properties"
+      }
+    },
+    "product": {
+      "details": "Details",
+      "features": "Features",
+      "related_products": {
+        "title": "Related Products"
+      }
+    },
+    "apartment": {
+      "details": "Property Details",
+      "description": "Description",
+      "similar_offers": {
+        "title": "You May Also Like"
       }
     }
   }

@@ -37,8 +37,8 @@
       </v-col>
 
       <v-col cols="12" lg="5">
-        <p class="display-2 font-weight-black">{{ product.name }}</p>
-        <p class="headline ">{{ product.short_description }}</p>
+        <p class="display-2 font-weight-black">{{ $i18n.locale == 'ar' ? product.ar_name : product.name }}</p>
+        <p class="headline ">{{ $i18n.locale == 'ar' ? product.ar_short_description: product.short_description }}</p>
         <div class="mt-2">
           <v-tabs v-model="tab" color="#fdbd3c" grow>
             <v-tabs-slider
@@ -46,10 +46,10 @@
               color="#fdbd3c"
             ></v-tabs-slider>
             <v-tab>
-              <strong class="font-weight-black text-h5">Details</strong>
+              <strong class="font-weight-black text-h5">{{$t("pages.product.details")}}</strong>
             </v-tab>
             <v-tab>
-              <strong class="font-weight-black text-h5">Features</strong>
+              <strong class="font-weight-black text-h5">{{$t("pages.product.features")}}</strong>
             </v-tab>
           </v-tabs>
           <v-tabs-items v-model="tab">
@@ -61,8 +61,8 @@
                     v-for="(property, index) of product.details"
                     :key="index"
                   >
-                    <td>{{ property.name }}</td>
-                    <td>{{ property.value }}</td>
+                    <td>{{ $i18n.locale == 'ar' ? property.ar_name :property.name }}</td>
+                    <td>{{ $i18n.locale == 'ar' ? property.ar_value :property.value }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -72,7 +72,7 @@
                 <tbody>
                   <tr v-for="(feature, index) of product.features" :key="index">
                     <td>
-                      <strong>{{ feature }}</strong>
+                      <strong>{{ $i18n.locale == 'ar' ? feature.ar_text : feature.text }}</strong>
                     </td>
                   </tr>
                 </tbody>
