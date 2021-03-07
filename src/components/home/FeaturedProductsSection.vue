@@ -3,7 +3,9 @@
     <v-row>
       <v-col>
         <h1 class="text-shadow big-text text-center">
-          <strong class="my-auto">Featured Products</strong>
+          <strong class="my-auto">
+            {{$t("pages.home.featured_products.title")}}
+          </strong>
         </h1>
       </v-col>
     </v-row>
@@ -54,7 +56,7 @@ export default {
 }
 .big-text {
   font-weight: 900 !important;
-  font-size: 4rem !important;
+  font-size: 2.5rem !important;
 }
 
 .category-card {

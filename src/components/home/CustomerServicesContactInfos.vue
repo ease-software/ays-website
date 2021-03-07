@@ -9,14 +9,13 @@
           <v-col></v-col>
           <v-col>
             <div class="text-center mt-16 pt-16">
-              <h1 class="big-text text-shadow white--text">Customer Service</h1>
+              <h1 class="big-text text-shadow white--text">{{$t("pages.home.customer_services.title")}}</h1>
               <p class="headline white--text">
-                Service, Complaint & Sales Calls Are Will Be Answered Within 30
-                Seconds
+                {{$t("pages.home.customer_services.text")}}
               </p>
               <h3 class="big-text">
-                <v-icon color="black" size="56">mdi-phone</v-icon>
-                <span>6485</span>
+                <v-icon color="black" size="64">mdi-phone</v-icon>
+                <span class="mx-4">{{$t("pages.home.customer_services.hotline")}}</span>
               </h3>
             </div>
           </v-col>

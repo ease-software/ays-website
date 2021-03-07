@@ -9,18 +9,14 @@
             class="mx-auto"
           ></v-img>
           <p class="display-1 mt-6 white--text text-shadow">
-            All Your Home Appliances
+            {{ $t("pages.home.intro.title") }}
           </p>
           <p class=" mt-4 white--text text-shadow big-text">
-            In One Place
+            {{ $t("pages.home.intro.title_ext") }}
           </p>
         </v-col>
         <v-col cols="12" lg="6" class="pt-12 pb-12">
-          <v-carousel
-            cycle
-            hide-delimiter-background
-            show-arrows-on-hover
-          >
+          <v-carousel cycle hide-delimiter-background show-arrows-on-hover>
             <v-carousel-item v-for="slide in 5" :key="slide">
               <v-img :src="require('../../assets/Appliances.png')"></v-img>
             </v-carousel-item>

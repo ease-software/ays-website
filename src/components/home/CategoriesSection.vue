@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <h1 class="text-shadow big-text text-center mb-8">
-          <strong class="my-auto">CATEGORIES</strong>
+          <strong class="my-auto">{{ $t("pages.home.categories.title") }}</strong>
         </h1>
       </v-col>
     </v-row>
@@ -83,7 +83,7 @@ export default {
 }
 .big-text {
   font-weight: 900 !important;
-  font-size: 3rem !important;
+  font-size: 2.4rem !important;
 }
 .category-card {
   border-color: #fdbd3c;

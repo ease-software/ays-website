@@ -18,5 +18,24 @@
       "location": "Al Diyum West, Khartoum, Sudan",
       "facebook": "find us on facebook"
     }
+  },
+  "pages": {
+    "home": {
+      "intro": {
+        "title": "All Your Home Appliances",
+        "title_ext": "In One Place"
+      },
+      "categories": {
+        "title": "Categories"
+      },
+      "customer_services": {
+        "title": "Customer Service",
+        "text": "Service, Complaint & Sales Calls Are Will Be Answered Within 30 Seconds",
+        "hotline": "6485"
+      },
+      "featured_products": {
+        "title": "Featured Products"
+      }
+    }
   }
 }
