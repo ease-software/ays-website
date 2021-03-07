@@ -19,7 +19,7 @@
           color="black"
           v-for="(page, index) of mainPages"
           :key="index"
-          rout
+          route
           :to="page.rout"
         >
           <strong>{{ page.name }}</strong>
@@ -44,22 +44,22 @@
       v-if="!$vuetify.breakpoint.lgAndUp"
     >
       <v-list nav dense>
-        <v-list-item-group
-          active-class="text--accent-4"
-          v-for="(page, index) of mainPages"
-          :key="index"
-          rout
-          :to="page.rout"
-        >
-          <v-list-item>
+        <v-list-item-group active-class="text--accent-4">
+          <v-list-item
+            v-for="(page, index) of mainPages"
+            :key="index"
+            route
+            :to="page.rout"
+          >
             <v-list-item-title>{{ page.name }}</v-list-item-title>
           </v-list-item>
           <v-divider class=""></v-divider>
         </v-list-item-group>
         <v-list-item-group active-class="text--accent-4" color="#fdbd3c">
-          <v-list-item>
-            <v-list-item-title>عربي</v-list-item-title>
-          </v-list-item>
+          <v-btn color="#fdbd3c" plain @click="switchLang">
+            <h4 v-if="$i18n.locale == 'en'">عربي</h4>
+            <h4 v-if="$i18n.locale == 'ar'">English</h4>
+          </v-btn>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -98,7 +98,6 @@ export default {
       window.localStorage.setItem("lang", newLang);
 
       this.$forceUpdate();
-      
 
       this.$emit("rerender", "lang switch");
     },
