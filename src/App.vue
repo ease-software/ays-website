@@ -3,7 +3,7 @@
     <v-container fluid class="pa-0 ma-0">
       <main-app-bar @rerender="rerender"></main-app-bar>
       <v-main>
-        <router-view></router-view>
+        <router-view :key="$route.fullPath"></router-view>
       </v-main>
       <main-footer />
     </v-container>
