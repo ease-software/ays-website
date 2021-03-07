@@ -16,11 +16,20 @@
           </p>
         </v-col>
         <v-col cols="12" lg="6" class="pt-12 pb-12">
+          <div v-if="loading">
+            <v-skeleton-loader
+              class="mx-auto"
+              max-width="300"
+              type="card"
+            ></v-skeleton-loader>
+          </div>
+          <div v-else>
           <v-carousel cycle hide-delimiter-background show-arrows-on-hover>
-            <v-carousel-item v-for="slide in 5" :key="slide">
-              <v-img :src="require('../../assets/Appliances.png')"></v-img>
+            <v-carousel-item v-for="(image, index) in images" :key="index">
+              <v-img :src="image.source"></v-img>
             </v-carousel-item>
           </v-carousel>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -28,7 +37,24 @@
 </template>
 
 <script>
-export default {};
+import axios from 'axios';
+export default {
+  data: () => ({
+    loading: true,
+    images: [],
+  }),
+  async created(){
+    await this.loadImages();
+  },
+  methods: {
+    async loadImages(){
+      this.loading = true;
+      const response = await axios.get('home-carousel');
+      this.images = response.data;
+      this.loading = false;
+    }
+  }
+};
 </script>
 
 <style scoped>
