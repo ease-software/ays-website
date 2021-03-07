@@ -1,14 +1,22 @@
 <template>
   <div class="rent-appartment-section-container">
+    <div v-if="loading">
+            <v-skeleton-loader
+              class="mx-auto"
+              max-width="300"
+              type="card"
+            ></v-skeleton-loader>
+          </div>
+          <div v-else>
     <v-carousel
       cycle
       hide-delimiter-background
       show-arrows-on-hover
       class=""
     >
-      <v-carousel-item v-for="(slide, i) in slides" :key="i">
+      <v-carousel-item v-for="(item, index) in items" :key="index">
         <v-img
-          :src="require('../../assets/rent_apprtment.png')"
+          :src="item.source"
           gradient="to left, #fdbd3c, #fdbd3c02"
           ><v-container>
             <v-row >
@@ -16,15 +24,11 @@
               <v-col>
                 <div class="mt-16 pb-16">
                   
-                  <p class="display-1 white--text">
-                    Rent Your
+                  
+                  <p class="big-text  white--text" style="color:black !important">
+                   {{$i18n.locale == 'ar'? item.ar_text : item.text}}
                   </p>
-                  <p class="big-text" style="color:black !important">
-                    Perfect Home
-                  </p>
-                  <p class="display-1 headline white--text">
-                    For Your Family
-                  </p>
+                  
                 </div>
               </v-col>
             </v-row>
@@ -32,15 +36,30 @@
         </v-img>
       </v-carousel-item>
     </v-carousel>
+          </div>
   </div>
 </template>
 
 <script>
+import offersCarouselAPI from '../../api/offersCarousel';
+
 export default {
   data() {
     return {
-      slides: ["First", "Second", "Third", "Fourth", "Fifth"]
+      loading: true,
+      items: []
     };
+  },
+  async created(){
+    await this.loadItems();
+  },
+  methods: {
+    async loadItems(){
+      this.loading = true;
+      const response = await offersCarouselAPI.loadItems();
+      this.items = response;
+      this.loading = false;
+    }
   }
 };
 </script>

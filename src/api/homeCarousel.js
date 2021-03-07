@@ -5,7 +5,6 @@ const homeCarouselAPI = {
     const response = await axios.get("home-carousel");
     return response.data;
   },
-  
 };
 
 export default homeCarouselAPI;
