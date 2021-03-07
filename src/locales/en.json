@@ -9,11 +9,13 @@
   },
   "footer": {
     "links": {
+      "title": "Useful Links",
       "home": "Home",
       "about": "About"
     },
     "contact_list": {
-      "mobile": "+249910010077",
+      "title": "Contact Us",
+      "mobile": "00249910010077",
       "email": "info@ays-gt.com",
       "location": "Al Diyum West, Khartoum, Sudan",
       "facebook": "find us on facebook"
@@ -55,20 +57,20 @@
         "offers_categories": [
           {
             "bedrooms_count": 3,
-            "title": "Three bedrooms",
-            "slug": "three_bedrooms",
+            "title": "Three rooms",
+            "slug": "Three bedrooms",
             "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
           },
           {
             "bedrooms_count": 2,
             "title": "Two bedrooms",
-            "slug": "two_bedrooms",
+            "slug": "Two rooms",
             "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
           },
           {
             "bedrooms_count": 1,
-            "title": "One bedroom",
-            "slug": "one_bedroom",
+            "title": "One room",
+            "slug": "One bedroom",
             "description": "hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world, hello world"
           }
         ]

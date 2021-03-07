@@ -23,7 +23,7 @@
           lg="4"
           sm="12"
         >
-          <v-card elevation="2" route :to="`/apartments/${offer.title}`">
+          <v-card elevation="2" route :to="{path:`/apartments/${offer.slug}`}">
             <v-card-title>
               <v-container fill-height>
                 <v-row align="center">
@@ -34,7 +34,7 @@
                   </v-col>
                   <v-col cols="12" lg="9">
                     <h1
-                      class="display-2 font-weight-bold"
+                      class="display-1 font-weight-bold"
                       style="word-wrap: normal !important"
                     >
                       {{ offer.title }}

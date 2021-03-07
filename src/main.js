@@ -6,7 +6,7 @@ import vuetify from "./plugins/vuetify";
 import i18n from "./i18n";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://backend.ays.ease-group.com/api";
+axios.defaults.baseURL = "http://localhost:8000/api";
 
 
 Vue.config.productionTip = false;

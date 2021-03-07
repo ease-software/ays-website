@@ -2,7 +2,7 @@
   <v-footer dark class="py-16">
     <v-container>
       <v-row>
-        <v-col cols="12" md="12" lg="5">
+        <v-col cols="12" md="12" lg="3">
           <router-link to="/">
             <v-img
               contain
@@ -11,9 +11,9 @@
               height="45"
           /></router-link>
         </v-col>
-        <v-col cols="3" md="12" lg="3">
+        <v-col cols="3" md="12" lg="4">
           <div>
-            <strong class="display-1">Links</strong>
+            <strong class="display-1">{{$t("footer.links.title")}}</strong>
           </div>
           <div class="my-4" v-for="(link, index) of links" :key="index">
             <v-btn dark plain route :to="link.rout">
@@ -21,9 +21,9 @@
             </v-btn>
           </div>
         </v-col>
-        <v-col cols="12" md="12" lg="4">
+        <v-col cols="12" md="12" lg="5">
           <div>
-            <strong class="display-1">Contact Us</strong>
+            <strong class="display-1">{{$t("footer.contact_list.title")}}</strong>
           </div>
           <div
             class="my-4"

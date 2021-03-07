@@ -9,14 +9,16 @@
   },
   "footer": {
     "links": {
+      "title": "روابط سريعة",
       "home": "الرئسية",
       "about": "عن الشركة"
     },
     "contact_list": {
-      "mobile": "+249910010077",
+      "title": "تواصل معنا",
+      "mobile": "00249910010077",
       "email": "info@ays-gt.com",
       "location": "الخرطوم شارع السجانة بالنص",
-      "facebook": "find us on facebook"
+      "facebook": "صفحتنا على فيسبوك"
     }
   },
   "pages": {
@@ -34,7 +36,7 @@
         "hotline": "6485"
       },
       "featured_products": {
-        "title": "خصائص مميزة"
+        "title": "منتجات مميزة"
       }
     },
     "products": {
@@ -54,15 +56,15 @@
         "text": "ابحث عن الخصائص التي تريدها حيث تستطيع الحجز في المنطقة التي تناسبك ",
         "offers_categories": [
           {
-            "bedrooms_count": 3, "title": "ثلاث غرف نوم", "slug": "three_bedrooms", 
+            "bedrooms_count": 3, "title": "ثلاث غرف", "slug": "Three bedrooms", 
             "description": "نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,"
           },
           {
-            "bedrooms_count": 2, "title": "غرفتي نوم", "slug": "two_bedrooms", 
+            "bedrooms_count": 2, "title": "غرفتين", "slug": "Two bedrooms", 
             "description": "نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,"
           },
           {
-            "bedrooms_count": 1, "title": "غرفة نوم واحدة", "slug": "one_bedroom", 
+            "bedrooms_count": 1, "title": "غرفة واحدة", "slug": "One bedroom", 
             "description": "نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,نص عربي ,"
           }
         ]
