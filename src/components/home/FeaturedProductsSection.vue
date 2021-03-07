@@ -42,7 +42,7 @@ export default {
   methods: {
     async loadFeaturedProducts() {
       this.loading = true;
-      const response = await productsAPI.loadProducts();
+      const response = await productsAPI.loadFeaturedProducts();
       this.products = response;
       this.loading = false;
     },
