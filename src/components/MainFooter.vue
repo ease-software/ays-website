@@ -44,31 +44,34 @@
 <script>
 export default {
   data: () => ({
-    links: [
-      { name: "Home", rout: "/" },
-      { name: "About", rout: "#" },
-      { name: "Contact", rout: "#" },
-    ],
-    contacts_list: [
-      { name: "+249910010077", link: "tel:+249900878400", icon: "mdi-phone" },
+    links: [],
+    contacts_list: [],
+  }),
+  created() {
+    this.links = [
+      { name: this.$t("footer.links.home"), rout: "/" },
+      { name: this.$t("footer.links.about"), rout: "/about" },
+    ];
+    this.contacts_list = [
+      { name: this.$t("footer.contact_list.mobile"), link: "tel:+249900878400", icon: "mdi-phone" },
       {
-        name: "youremail@gmail.com",
+        name: this.$t("footer.contact_list.email"),
         link: "mailto:info@ays-gt.com",
         icon: "mdi-email",
       },
       {
         // name: "الخرطوم شارع السجانة بالنص",
-        name: "Al Diyum West, Khartoum, Sudan",
+        name: this.$t("footer.contact_list.location"),
         link: "https://goo.gl/maps/32V8RipvcmgZTMaf6",
         icon: "mdi-map",
       },
       {
-        name: "find us on facebook",
+        name: this.$t("footer.contact_list.facebook"),
         link: "https://www.facebook.com/facebook",
         icon: "mdi-facebook",
       },
-    ],
-  }),
+    ];
+  },
 };
 </script>
 
