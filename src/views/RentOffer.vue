@@ -11,7 +11,7 @@
       <div class="my-16"></div>
       <intro :offer="apartment" />
       <div class="my-8"></div>
-      <similar-offers />
+      <similar-offers :apartment_id="apartment.id" />
       <div class="my-16"></div>
     </div>
   </div>

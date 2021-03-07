@@ -18,6 +18,11 @@ const apartmentsAPI = {
     const response = await axios.get(`apartments/${id}`);
     return response.data;
   },
+
+  async loadSimilarApartments(id) {
+    const response = await axios.get(`apartments/${id}/similar`);
+    return response.data;
+  },
 };
 
 export default apartmentsAPI;
