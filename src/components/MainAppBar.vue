@@ -76,7 +76,7 @@ export default {
       { name: "Home", rout: "/" },
       { name: "Products", rout: "/products" },
       { name: "Rent Apartments", rout: "/apartments" },
-      { name: "About us", rout: "#" },
+      { name: "About us", rout: "/about" },
     ],
   }),
   created() {
